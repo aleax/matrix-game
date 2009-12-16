@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete[] table;
 }
 
 void MainWindow::changeEvent(QEvent *e)
@@ -31,4 +32,27 @@ void MainWindow::changeColums(int n){
 
 void MainWindow::changeRows(int n){
     ui->tableWidget->setRowCount(n);
+}
+
+void MainWindow::solve()
+{
+    getData();
+}
+
+void MainWindow::getData()
+{
+    table=new double*[ui->tableWidget->columnCount()];
+    for (int i=0; i<ui->tableWidget->columnCount(); ++i)
+        table[i] = new double[ui->tableWidget->rowCount()];
+
+    for(int i; i<ui->tableWidget->columnCount(); ++i)
+    for(int j; j<ui->tableWidget->rowCount(); ++j)
+        table[i][j]=ui->tableWidget->item(i,j)->text().toDouble();
+
+    if( ui->radioButton->isChecked() )
+        gamerA=true;
+    else gamerA=false;
+
+    qDebug()<<table;
+    qDebug()<<gamerA;
 }

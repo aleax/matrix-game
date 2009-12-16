@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QDebug>
 
 namespace Ui {
     class MainWindow;
@@ -19,9 +20,14 @@ protected:
 private:
     Ui::MainWindow *ui;
 
+    double **table;
+    bool gamerA;
+
 private slots:
     void changeColums(int n);
     void changeRows(int n);
+    void solve();
+    void getData();
 };
 
 #endif // MAINWINDOW_H

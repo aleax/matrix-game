@@ -255,9 +255,26 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>solve()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>345</x>
+     <y>41</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>204</x>
+     <y>156</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>changeRows(int)</slot>
   <slot>changeColums(int)</slot>
+  <slot>solve()</slot>
  </slots>
 </ui>
