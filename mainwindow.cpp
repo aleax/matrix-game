@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
+    delete[] table;
 }
 
 void MainWindow::changeEvent(QEvent *e)

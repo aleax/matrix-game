@@ -6,172 +6,199 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>510</width>
-    <height>265</height>
+    <width>410</width>
+    <height>313</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Matrix Game</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QGridLayout" name="gridLayout_2">
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>70</y>
+      <width>361</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <row>
+     <property name="text">
+      <string>A1</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>A2</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>A3</string>
+     </property>
+    </row>
+    <column>
+     <property name="text">
+      <string>B1</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>B2</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>B3</string>
+     </property>
+    </column>
     <item row="0" column="0">
-     <widget class="QWidget" name="gridWidget" native="true">
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="1" column="0">
-        <widget class="QLabel" name="label">
-         <property name="text">
-          <string>Платіжна матриця</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="3">
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>x</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="4">
-        <widget class="QSpinBox" name="spinBoxColums">
-         <property name="minimum">
-          <number>1</number>
-         </property>
-         <property name="value">
-          <number>3</number>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="2">
-        <widget class="QSpinBox" name="spinBoxRows">
-         <property name="minimum">
-          <number>1</number>
-         </property>
-         <property name="value">
-          <number>3</number>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="6" rowspan="2">
-        <widget class="QPushButton" name="pushButton">
-         <property name="text">
-          <string>Жмакни тут!</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0" colspan="7">
-        <widget class="QTableWidget" name="tableWidget">
-         <row>
-          <property name="text">
-           <string>A1</string>
-          </property>
-         </row>
-         <row>
-          <property name="text">
-           <string>A2</string>
-          </property>
-         </row>
-         <row>
-          <property name="text">
-           <string>A3</string>
-          </property>
-         </row>
-         <column>
-          <property name="text">
-           <string>B1</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>B2</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>B3</string>
-          </property>
-         </column>
-         <item row="0" column="0">
-          <property name="text">
-           <string>50</string>
-          </property>
-         </item>
-         <item row="0" column="1">
-          <property name="text">
-           <string>15</string>
-          </property>
-         </item>
-         <item row="0" column="2">
-          <property name="text">
-           <string>20</string>
-          </property>
-         </item>
-         <item row="1" column="0">
-          <property name="text">
-           <string>25</string>
-          </property>
-         </item>
-         <item row="1" column="1">
-          <property name="text">
-           <string>40</string>
-          </property>
-         </item>
-         <item row="1" column="2">
-          <property name="text">
-           <string>30</string>
-          </property>
-         </item>
-         <item row="2" column="0">
-          <property name="text">
-           <string>10</string>
-          </property>
-         </item>
-         <item row="2" column="1">
-          <property name="text">
-           <string>30</string>
-          </property>
-         </item>
-         <item row="2" column="2">
-          <property name="text">
-           <string>60</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item row="1" column="5">
-        <spacer name="horizontalSpacer_2">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="0" column="2">
-        <widget class="QRadioButton" name="radioButton_2">
-         <property name="text">
-          <string>за гравця B</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0">
-        <widget class="QRadioButton" name="radioButton">
-         <property name="text">
-          <string>за гравця А</string>
-         </property>
-         <property name="checked">
-          <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
+     <property name="text">
+      <string>50</string>
+     </property>
     </item>
-   </layout>
+    <item row="0" column="1">
+     <property name="text">
+      <string>15</string>
+     </property>
+    </item>
+    <item row="0" column="2">
+     <property name="text">
+      <string>20</string>
+     </property>
+    </item>
+    <item row="1" column="0">
+     <property name="text">
+      <string>25</string>
+     </property>
+    </item>
+    <item row="1" column="1">
+     <property name="text">
+      <string>40</string>
+     </property>
+    </item>
+    <item row="1" column="2">
+     <property name="text">
+      <string>30</string>
+     </property>
+    </item>
+    <item row="2" column="0">
+     <property name="text">
+      <string>10</string>
+     </property>
+    </item>
+    <item row="2" column="1">
+     <property name="text">
+      <string>30</string>
+     </property>
+    </item>
+    <item row="2" column="2">
+     <property name="text">
+      <string>60</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>40</y>
+      <width>131</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Платіжна матриця</string>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>104</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>за гравця А</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QRadioButton" name="radioButton_2">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>10</y>
+      <width>104</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>за гравця B</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBoxRows">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>40</y>
+      <width>53</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>41</y>
+      <width>16</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>x</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="spinBoxColums">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>40</y>
+      <width>53</width>
+      <height>22</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <number>1</number>
+    </property>
+    <property name="value">
+     <number>3</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>0</y>
+      <width>71</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Жмакни</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -195,7 +222,56 @@
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>spinBoxColums</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>changeColums(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>266</x>
+     <y>61</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>204</x>
+     <y>156</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>spinBoxRows</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>changeRows(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>186</x>
+     <y>61</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>204</x>
+     <y>156</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>solve()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>345</x>
+     <y>41</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>204</x>
+     <y>156</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
  <slots>
   <slot>changeRows(int)</slot>
   <slot>changeColums(int)</slot>
