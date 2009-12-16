@@ -1,0 +1,16 @@
+# ignore objects and archives, anywhere in the tree.
+*.[oa]
+# ignore tmp files
+*~
+# ignore build dir
+build/*
+# moc
+moc_*.cpp
+ui_*.h
+ui_*.cpp
+
+#Make and binary
+Makefile*
+matrix-game
+build/*
+
