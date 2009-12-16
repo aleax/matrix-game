@@ -24,3 +24,11 @@ void MainWindow::changeEvent(QEvent *e)
         break;
     }
 }
+
+void MainWindow::changeColums(int n){
+    ui->tableWidget->setColumnCount(n);
+}
+
+void MainWindow::changeRows(int n){
+    ui->tableWidget->setRowCount(n);
+}

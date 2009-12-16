@@ -18,6 +18,10 @@ protected:
 
 private:
     Ui::MainWindow *ui;
+
+private slots:
+    void changeColums(int n);
+    void changeRows(int n);
 };
 
 #endif // MAINWINDOW_H
