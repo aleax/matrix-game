@@ -36,6 +36,7 @@ void MainWindow::changeRows(int n){
 void MainWindow::solve()
 {
     getData();
+
     ReductionToLP rtlp(table,
                        ui->tableWidget->columnCount(),
                        ui->tableWidget->rowCount(),
@@ -46,13 +47,16 @@ void MainWindow::solve()
 
 void MainWindow::getData()
 {
-    table=new double*[ui->tableWidget->columnCount()];
-    for (int i=0; i<ui->tableWidget->columnCount(); ++i)
-        table[i] = new double[ui->tableWidget->rowCount()];
+    table=new double*[ui->tableWidget->rowCount()];
 
-    for(int i; i<ui->tableWidget->columnCount(); ++i)
-    for(int j; j<ui->tableWidget->rowCount(); ++j)
+    for (int i=0; i<ui->tableWidget->rowCount(); ++i)
+        table[i] = new double[ui->tableWidget->columnCount()];
+
+    for(int i=0; i < ui->tableWidget->rowCount(); ++i)
+    for(int j=0; j < ui->tableWidget->columnCount();  ++j)
+    {
         table[i][j]=ui->tableWidget->item(i,j)->text().toDouble();
+    }
 
     if( ui->radioButton->isChecked() )
         gamerA=true;

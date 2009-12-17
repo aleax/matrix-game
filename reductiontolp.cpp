@@ -23,7 +23,7 @@ bool ReductionToLP::convert()
     {
         res=rows;
         eq=LESS_EQUAL;
-        var=rows;
+        var=cols;
     }
 
     B = new double[res];
@@ -34,17 +34,17 @@ bool ReductionToLP::convert()
     for (int i=0; i<var; ++i)
         A[i] = new double[res];
 
-    for (int i=0; i<res; ++i)
-    for (int j=0; j<var; ++j)
+    for (int i=0; i<var; ++i)
+    for (int j=0; j<res; ++j)
     {
         //FIXME
-        A[i][j]=matrix[i][j];
+        A[i][j]=matrix[j][i];
     }
 
     for (int i=0;i<res;++i)
     {
         B[i]=1;
-        EQ[i]=eq;            
+        EQ[i]=eq;
     }
 
     for (int i=0; i<var; ++i)
