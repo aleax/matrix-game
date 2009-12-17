@@ -15,41 +15,77 @@ bool ReductionToLP::convert()
 
     if(gamerA)
     {
-        res=cols;
+        //res=cols;
         eq=MORE_EQUAL;
-        var=rows;
+      //  var=rows;
     }
     else
     {
-        res=rows;
+       // res=rows;
         eq=LESS_EQUAL;
-        var=cols;
+        //var=cols;
     }
 
-    B = new double[res];
-    C = new double[var];
-    EQ = new char[res];
 
-    A=new double*[var];
-    for (int i=0; i<var; ++i)
-        A[i] = new double[res];
 
-    for (int i=0; i<var; ++i)
-    for (int j=0; j<res; ++j)
+    if(gamerA)
     {
-        //FIXME
-        A[i][j]=matrix[j][i];
+        B = new double[cols];
+        C = new double[rows];
+        EQ = new char[cols];
+
+        A=new double*[cols];
+        for (int i=0; i<cols; ++i)
+            A[i] = new double[rows];
+
+
+        for (int i=0; i<rows; ++i)
+        for (int j=0; j<cols; ++j)
+        {
+            //std::cout<<matrix[i][j]<<"  ";
+            //FIXME
+            A[i][j]=matrix[j][i];
+        }
+
+        for (int i=0;i<cols;++i)
+        {
+            B[i]=1;
+            EQ[i]=eq;
+        }
+
+        for (int i=0; i<rows; ++i)
+        {
+            C[i]=1;
+        }
     }
-
-    for (int i=0;i<res;++i)
+    else
     {
-        B[i]=1;
-        EQ[i]=eq;
-    }
+        B = new double[rows];
+        C = new double[cols];
+        EQ = new char[rows];
 
-    for (int i=0; i<var; ++i)
-    {
-        C[i]=1;
+        A=new double*[rows];
+        for (int i=0; i<rows; ++i)
+            A[i] = new double[cols];
+
+        for (int i=0; i<rows; ++i)
+        for (int j=0; j<cols; ++j)
+        {
+            //std::cout<<matrix[i][j]<<"  ";
+            //FIXME
+            A[i][j]=matrix[i][j];
+        }
+
+        for (int i=0;i<rows;++i)
+        {
+            B[i]=1;
+            EQ[i]=eq;
+        }
+
+        for (int i=0; i<cols; ++i)
+        {
+            C[i]=1;
+        }
     }
 
     return 0;
