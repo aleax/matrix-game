@@ -11,8 +11,19 @@ protected:
     double **matrix;
     bool gamerA;
     int cols,rows;
+
+    int var;
+    int res;
+    double *C;
+    double *B;
+    double **A;
+    bool min;
+    char *EQ;
+
 public:
     ReductionToLP(double **matrix, int cols, int rows, bool gamerA);
+    bool convert();
+    bool solve();
 };
 
 #endif // REDUCTIONTOLP_H

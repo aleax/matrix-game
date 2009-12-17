@@ -36,6 +36,12 @@ void MainWindow::changeRows(int n){
 void MainWindow::solve()
 {
     getData();
+    ReductionToLP rtlp(table,
+                       ui->tableWidget->columnCount(),
+                       ui->tableWidget->rowCount(),
+                       gamerA);
+    rtlp.convert();
+    rtlp.solve();
 }
 
 void MainWindow::getData()

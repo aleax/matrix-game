@@ -4,6 +4,8 @@
 #include <QMainWindow>
 #include <QDebug>
 
+#include "reductiontolp.h"
+
 namespace Ui {
     class MainWindow;
 }
