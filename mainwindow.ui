@@ -35,7 +35,7 @@
     <item row="0" column="5" rowspan="2">
      <widget class="QPushButton" name="pushButton">
       <property name="text">
-       <string>Жмакни</string>
+       <string>ТИЦЬ!</string>
       </property>
      </widget>
     </item>
@@ -172,8 +172,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>0</width>
-     <height>0</height>
+     <width>412</width>
+     <height>25</height>
     </rect>
    </property>
   </widget>

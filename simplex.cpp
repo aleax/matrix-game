@@ -179,21 +179,22 @@ bool simplex::Simplex::solve()
                 std::cout<<"ITERATIJN№"<<iteration<<std::endl; //fixme
                 iteration++;
 	}
-    while(!isOptimal() && iteration<10);
+    while(!isOptimal() && iteration<100);
         return error;
 }
 
 bool simplex::Simplex::isOptimal() //REVIEWED
 {
-        bool result=true;
+
 
 	for(int i=0; i<var; ++i)
-                if(BasicPlan[i]>0)
-			result=false;
+                if((BasicPlan[i]<0)&&!min)
+                        return false;
 
-	if(min)
-		return result;
-	return !result;
+        for(int i=0; i<var; ++i)
+                if((BasicPlan[i]>0)&&min)
+                        return false;
+        return true;
 }
 
 void simplex::Simplex::calculateBasicPlan() //REVIEWED
